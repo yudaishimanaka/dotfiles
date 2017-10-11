@@ -57,8 +57,8 @@ nnoremap <Leader>f ^
 nnoremap <Leader>j $
 nnoremap <Leader>g gg
 nnoremap <Leader>h G
-
-
+nnoremap <Leader>v <C-b>
+nnoremap <Leader>n <C-f>
 
 "tab string to half space"
 set expandtab
