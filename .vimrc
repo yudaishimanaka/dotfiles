@@ -1,4 +1,6 @@
 autocmd BufRead,BufNewFile *.yml setfiletype yml
+let mapleader = "\<Space>"
+
 "setting utf-8"
 set fenc=utf-8
 
@@ -17,13 +19,19 @@ set hidden
 "show status"
 set showcmd
 
+"tab complite"
+set nocompatible
 
+
+
+"line number color"
+hi LineNr ctermbg=0 ctermfg=0
+hi CursorLinerNr ctermbg=4 ctermfg=0
+set cursorline
+hi clear CursorLine
 
 "line number"
 set number
-
-"emphasis line number"
-set cursorline
 
 "カーソルを行末の一文字先まで移動"
 set virtualedit=onemore
@@ -40,12 +48,15 @@ set showmatch
 "commandline completion"
 set wildmode=list:longest
 
-"vim to OS copy clipboard"
-set clipboard=unnamedplus
+nnoremap f h
+nnoremap j l
+nnoremap g gk
+nnoremap h gj
 
-nnoremap j gj
-nnoremap k gk
-
+nnoremap <Leader>f ^
+nnoremap <Leader>j $
+nnoremap <Leader>g gg
+nnoremap <Leader>h G
 
 
 
@@ -78,3 +89,10 @@ set wrapscan
 
 "highlight search"
 set hlsearch
+
+
+
+"custom command "
+inoremap ,df <C-r>=strftime('%Y-%m-%dT%H:%M:%S')<Return>
+
+nnoremap <C-c> <Esc>
