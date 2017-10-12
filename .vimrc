@@ -1,5 +1,16 @@
 autocmd BufRead,BufNewFile *.yml setfiletype yml
+"leader key"
 let mapleader = "\<Space>"
+
+
+
+"color scheme setting"
+colorscheme lucius
+
+"background color"
+set background=dark
+
+
 
 "setting utf-8"
 set fenc=utf-8
@@ -74,6 +85,8 @@ set autoindent
 
 "syntax highlight"
 syntax on
+
+
 
 "search lower case"
 set ignorecase
