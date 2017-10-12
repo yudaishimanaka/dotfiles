@@ -96,3 +96,6 @@ set hlsearch
 inoremap ,df <C-r>=strftime('%Y-%m-%dT%H:%M:%S')<Return>
 
 nnoremap <C-c> <Esc>
+
+"vim to OS clipboard use xsel"
+vmap <C-c> :w !xsel -ib<CR><CR>
