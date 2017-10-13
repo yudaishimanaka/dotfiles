@@ -1,4 +1,3 @@
-autocmd BufRead,BufNewFile *.yml setfiletype yml
 "leader key"
 let mapleader = "\<Space>"
 
@@ -116,3 +115,8 @@ nnoremap <C-c> <Esc>
 
 "vim to OS clipboard use xsel"
 vmap <C-c> :w !xsel -ib<CR><CR>
+
+"filetype setting"
+autocmd BufRead,BufNewFile *.yml setfiletype yml
+autocmd BufRead,BufNewFile *.go setfiletype go
+autocmd BufRead,BufNewFile *.py setfiletype python
