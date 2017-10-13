@@ -67,12 +67,24 @@ nnoremap j l
 nnoremap g gk
 nnoremap h gj
 
+vnoremap f h
+vnoremap j l
+vnoremap g gk
+vnoremap h gj
+
 nnoremap <Leader>f ^
 nnoremap <Leader>j $
 nnoremap <Leader>g gg
 nnoremap <Leader>h G
 nnoremap <Leader>v <C-b>
 nnoremap <Leader>n <C-f>
+
+vnoremap <Leader>f ^
+vnoremap <Leader>j $
+vnoremap <Leader>g gg
+vnoremap <Leader>h G
+vnoremap <Leader>v <C-b>
+vnoremap <Leader>n <C-f>
 
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
@@ -122,6 +134,19 @@ nnoremap <C-c> <Esc>
 
 "vim to OS clipboard use xsel"
 vmap <C-c> :w !xsel -ib<CR><CR>
+
+"いい感じに{}時改行をする"
+function! IndentBraces()
+    let nowletter = getline(".")[col(".")-1]
+    let beforeletter = getline(".")[col(".")-2]
+        
+    if nowletter == "}" && beforeletter == "{"
+        return "\n\t\n\<UP>\<RIGHT>"
+    else
+        return "\n"
+    endif
+endfunction
+inoremap <silent> <expr> <CR> IndentBraces()
 
 "filetype setting"
 autocmd BufRead,BufNewFile *.yml setfiletype yml
