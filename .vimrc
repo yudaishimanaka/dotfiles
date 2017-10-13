@@ -74,6 +74,13 @@ nnoremap <Leader>h G
 nnoremap <Leader>v <C-b>
 nnoremap <Leader>n <C-f>
 
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap < <><LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+
 "tab string to half space"
 set expandtab
 
