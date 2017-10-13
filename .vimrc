@@ -7,6 +7,13 @@ let mapleader = "\<Space>"
 "color scheme setting"
 colorscheme lucius
 
+"backgroutd transparent"
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none 
+
 "background color"
 set background=dark
 
@@ -36,10 +43,7 @@ set nocompatible
 
 
 "line number color"
-hi LineNr ctermbg=0 ctermfg=0
-hi CursorLinerNr ctermbg=4 ctermfg=0
 set cursorline
-hi clear CursorLine
 
 "line number"
 set number
