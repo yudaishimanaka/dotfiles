@@ -141,7 +141,7 @@ function! IndentBraces()
     let beforeletter = getline(".")[col(".")-2]
         
     if nowletter == "}" && beforeletter == "{"
-        return "\n\t\n\<UP>\<RIGHT>"
+        return "\n\n\<BS>\<BS>\<BS>\<BS>\<UP>\<RIGHT>\<RIGHT>\<RIGHT>\<RIGHT>"
     else
         return "\n"
     endif
