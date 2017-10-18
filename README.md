@@ -7,7 +7,7 @@ $ bash install.sh
 ```
 
 ## 2. Setup pyenv
-**!!!!CAUTION!!!!**
+**!!!!CAUTION!!!!**  
 **Before doing this you need to register the public key in github**
 ```shell
 $ bash pyenv.sh
