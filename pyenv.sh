@@ -13,3 +13,5 @@ fi
 source ~/.bash_profile
 
 git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+
+echo 'eval "$(pyenv virtualenv-init -)"'
